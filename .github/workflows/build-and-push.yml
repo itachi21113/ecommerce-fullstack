@@ -30,7 +30,7 @@ jobs:
       - name: Build and push frontend image
         uses: docker/build-push-action@v4
         with:
-          context: ./myshop-frontend
+          context: ./myShop-frontend
           push: true
           tags: itachi21113/ecom-frontend:latest
 
