@@ -83,6 +83,7 @@ public class SecurityConfig {
                         // Allow public access to auth, payments, and webhooks
                         .requestMatchers("/api/auth/**", "/api/payments/**", "/api/stripe/webhook").permitAll()
                         // All other requests must be authenticated
+                        .requestMatchers("/api/test/health").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(exception -> exception
