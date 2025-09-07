@@ -22,4 +22,9 @@ public class TestController {
     public ResponseEntity<String> getAdminOnlyData() {
         return ResponseEntity.ok("This data is only for Admins!");
     }
+
+    @GetMapping("/health") // This is our new public endpoint
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("OK");
+    }
 }
