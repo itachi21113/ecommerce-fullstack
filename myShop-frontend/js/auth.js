@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const password = e.target.password.value;
 
       try {
-        await registerUser({ firstName, lastName, email, password });
+        // --- THIS IS THE FIX ---
+        await registerUser({ firstName, lastName, email, password, username: email });
         alert("Registration successful! Please log in.");
         window.location.href = "login.html";
       } catch (error) {
