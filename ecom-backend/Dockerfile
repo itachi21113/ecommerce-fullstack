@@ -10,6 +10,9 @@ WORKDIR /app
 # If the pom.xml hasn't changed, it won't re-download dependencies, saving a lot of time.
 COPY pom.xml .
 
+# Explicitly copy the src directory to ensure application.properties is included
+COPY src ./src
+
 # Copy the rest of the source code into the container.
 COPY . .
 
